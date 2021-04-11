@@ -1,0 +1,71 @@
+<body class="text-center">
+  <img
+    class="mx-auto d-block rounded"
+    src="assets/images/logo.jpg"
+    class="rounded float-start"
+    style="width: 45rem;"
+    alt="..."
+  />
+  <main class="form-signin">
+    <form [formGroup]="registerForm">
+      <u class="h4 mb-3 fw-normal">Sign up</u>
+      <br>
+      <br>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          formControlName="firstName"
+          class="form-control"
+          id="floatingInputName"
+          placeholder="Adınız"
+        />
+        <label for="floatingInput">First Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          formControlName="lastName"
+          class="form-control"
+          id="floatingInputSurname"
+          placeholder="Soyadınız"
+        />
+        <label for="floatingInput">Last Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="email"
+          formControlName="email"
+          class="form-control"
+          id="floatingInputEmail"
+          placeholder="name@example.com"
+        />
+        <label for="floatingInput">Email</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="password"
+          formControlName="password"
+          class="form-control"
+          id="floatingPassword1"
+          placeholder="Parola"
+        />
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          formControlName="password2"
+          type="password"
+          class="form-control"
+          id="floatingPassword2"
+          placeholder="Parola Doğrula"
+        />
+        <label for="floatingPassword">Verify Password</label>
+      </div>
+
+      <button class="w-100 btn btn-lg btn btn-outline-success" (click)="register()">
+        Register
+      </button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2015–2021</p>
+    </form>
+  </main>
+</body>

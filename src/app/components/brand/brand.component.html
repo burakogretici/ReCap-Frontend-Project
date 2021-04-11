@@ -1,0 +1,23 @@
+<div class="col-md">
+  <h1 class="text-dark"><u>Brand</u></h1>
+  <select
+    [(ngModel)]="selectedBrandId"
+    class="form-select"
+    aria-label="Default select example"
+  >
+    <option *ngFor="let brand of brands" value="{{ brand.brandId }}">
+      {{ brand.brandName }}
+    </option>
+  </select>
+
+  <button
+    type="button"
+    class="btn btn-dark mt-3 "
+    routerLink="/cars/brand/{{ selectedBrandId }}"
+  >
+    Filter
+  </button>
+  <button type="button" class="btn btn-outline-danger mt-3 ms-3" routerLink="/">
+    Filter Clear
+  </button>
+</div>

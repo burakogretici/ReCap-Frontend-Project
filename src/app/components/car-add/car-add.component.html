@@ -1,0 +1,78 @@
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="title" > <u>Car Add</u>  </h1>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="carAddForm">
+          <div class="form-group">
+            <select class="form-select" id="brands" formControlName="brandId">
+              <option value="">Choose brand</option>
+
+              <option *ngFor="let brand of brands" [ngValue]="brand.brandId">
+                {{ brand.brandName }}
+              </option>
+            </select>
+          </div>
+          <br />
+          <div class="form-group">
+            <select class="form-select" id="colors" formControlName="colorId">
+              <option value="">Choose color</option>
+
+              <option *ngFor="let color of colors" [ngValue]="color.colorId">
+                {{ color.colorName }}
+              </option>
+            </select>
+          </div>
+          <br />
+          <div class="form-group">
+            <input
+              type="number"
+              id="modelYear"
+              formControlName="modelYear"
+              [(ngModel)]="modelYearText"
+              class="form-control"
+              placeholder="Model Year"
+            />
+          </div>
+          <br />
+          <div class="form-group">
+            <input
+              type="number"
+              id="dailyPrice"
+              formControlName="dailyPrice"
+              [(ngModel)]="dailyPriceText"
+              class="form-control"
+              placeholder="Daily Price"
+            />
+          </div>
+          <br />
+          <div class="form-group">
+            <input
+              type="text"
+              id="descriptionCar"
+              formControlName="descriptionCar"
+              [(ngModel)]="descriptionCarText"
+              class="form-control"
+              placeholder="Description"
+            />
+          </div>
+          <br>
+          <div class="card-footer">
+            <button
+              type="button"
+              class="btn btn-outline-primary col-md-5 mx-3"
+              (click)="add()"
+            >
+              Add
+            </button>
+            <button (click)="delete()" type="button" class="btn btn-outline-danger col-md-5 mx-3">
+              Delete
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

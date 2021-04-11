@@ -1,0 +1,37 @@
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="title">Brand Add</h1>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="brandAddForm">
+          <br />
+          <div class="form-group">
+            <input
+              type="text"
+              [(ngModel)]="brandText"
+              id="brandName"
+              formControlName="brandName"
+              class="form-control"
+              placeholder="Brand Name"
+            />
+          </div>
+          <br>
+          <div class="card-footer">
+            <button
+              type="button"
+              class="btn btn-outline-primary col-md-5 mx-3"
+              (click)="add()"
+            >
+              Add
+            </button>
+            <button (click)="delete()" type="button" class="btn btn-outline-danger col-md-5 mx-3">
+              Delete
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
